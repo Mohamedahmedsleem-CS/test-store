@@ -12,10 +12,13 @@
 
   <body>
     <div style="content: center;">
-      
       <%= render 'layouts/messages' %>
       <br/>
     </div>
-    <%= yield %>
+    <div class="container">
+      <div class="row">  
+      <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

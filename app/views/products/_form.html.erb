@@ -1,12 +1,32 @@
+
+
+
+
+
 <%= form_with(model: @product, local: true) do  |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
+<div class="row">
+  <div class="col">
+    <!-- Name input -->
+    <div class="form-outline">
+      <label class="form-label" for="form8Example1">Name</label>
+      <%= f.text_field :name, class: "form-control form-control-lg" %>
+    </div>
+  </div>
+  <div class="col">
+    <!-- Email input -->
+    <div class="form-outline">
+      <label class="form-label" for="form8Example2">price</label>
+      <%= f.number_field :price, class: "form-control form-control-lg" %>
+    </div>
+  </div>
+</div>
 <br/>
-<%= f.label :description %>
-<%= f.text_area :description %>
+    <div class="form-outline">
+      <%= f.text_area :description, rows: 8,class: "form-control", placeholder: "description" %>
+    </div>
 <br/>
-<%= f.label :price %>
-<%= f.text_field :price %>
+<%= f.label :image %>
+<%= f.file_field :image %>
 <br/>
-  <%= f.submit %>
+  <%= f.submit  class: "btn btn-outline-primary mt-3" %>
 <% end %>
